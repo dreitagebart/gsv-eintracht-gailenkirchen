@@ -17,15 +17,6 @@ const Page = () => {
       >
         <Title>Hallo</Title>
         <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
-        <Text>lskdjf öalsdkfj ösaldkfj</Text>
       </Box>
     </Layout>
   )
