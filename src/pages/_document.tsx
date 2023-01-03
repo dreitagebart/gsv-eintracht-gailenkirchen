@@ -1,8 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { FC } from 'react'
 
-export default function Document() {
+interface Props {}
+
+const Document: FC<Props> = () => {
   return (
-    <Html lang="en">
+    <Html lang='en'>
       <Head />
       <body>
         <Main />
@@ -11,3 +14,5 @@ export default function Document() {
     </Html>
   )
 }
+
+export default Document
