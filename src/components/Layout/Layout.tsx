@@ -3,13 +3,27 @@ import { FC, ReactNode } from 'react'
 
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { Box, createStyles } from '@mantine/core'
+import { Content } from './Content'
 
 interface Props {
   title: string
   children: ReactNode
 }
 
+const useStyles = createStyles({
+  container: {
+    position: 'relative',
+    minHeight: '100vh'
+  },
+  wrapper: {
+    paddingBottom: 180
+  }
+})
+
 export const Layout: FC<Props> = ({ children, title }) => {
+  const { classes } = useStyles()
+
   return (
     <>
       <Head>
@@ -18,9 +32,13 @@ export const Layout: FC<Props> = ({ children, title }) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header></Header>
-      <main>{children}</main>
-      <Footer></Footer>
+      <Box className={classes.container}>
+        <Box className={classes.wrapper}>
+          <Header></Header>
+          <Content>{children}</Content>
+        </Box>
+        <Footer></Footer>
+      </Box>
     </>
   )
 }

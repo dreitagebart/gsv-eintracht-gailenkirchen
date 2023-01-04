@@ -24,6 +24,10 @@ const menu: Array<Record<'label' | 'href', string>> = [
     href: '/'
   },
   {
+    label: 'Termine',
+    href: '/termine'
+  },
+  {
     label: 'Verein',
     href: '/verein'
   },
@@ -59,9 +63,9 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 20,
-    color: theme.colors.lime[8],
+    color: theme.colors.brand[7],
     ':hover': {
-      color: theme.colors.lime[6]
+      color: theme.colors.brand[6]
     }
   },
   subMenuLink: {
@@ -73,14 +77,14 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 20,
-    color: theme.colors.lime[8],
+    color: theme.colors.brand[8],
     ':hover': {
-      color: theme.colors.lime[6]
+      color: theme.colors.brand[6]
     }
   },
   activeMenuLink: {
     color: theme.colors.gray[0],
-    backgroundColor: theme.colors.lime[8],
+    backgroundColor: theme.colors.brand[6],
     ':hover': {
       color: theme.colors.gray[1]
     }
@@ -88,18 +92,17 @@ const useStyles = createStyles((theme) => ({
 }))
 
 export const Header: FC<Props> = () => {
-  const theme = useMantineTheme()
   const router = useRouter()
-  const { classes, cx } = useStyles()
+  const { classes, cx, theme } = useStyles()
   const [opened, setOpened] = useState(false)
   const title = opened ? 'Menü schließen' : 'Menü öffnen'
 
   return (
-    <Group position='apart'>
+    <Group position='apart' mb='xl'>
       <Group pl='md' pt='md'>
         <Logo></Logo>
-        <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-          <Group spacing='lg'>
+        <MediaQuery smallerThan='md' styles={{ display: 'none' }}>
+          <Group spacing='md' ml='xl'>
             {menu.map(({ label, href }) => {
               return (
                 <UnstyledButton
@@ -117,7 +120,7 @@ export const Header: FC<Props> = () => {
           </Group>
         </MediaQuery>
       </Group>
-      <MediaQuery largerThan='sm' styles={{ display: 'none' }}>
+      <MediaQuery largerThan='md' styles={{ display: 'none' }}>
         <Flex direction='row' justify='flex-end' px='md'>
           <Burger
             opened={opened}

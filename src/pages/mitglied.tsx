@@ -4,9 +4,9 @@ import { Layout } from '../components'
 
 const Page = () => {
   return (
-    <Layout title='Verein'>
-      <Title>Verein</Title>
-      <Text>Vereinsseite</Text>
+    <Layout title='Mitglied'>
+      <Title>Jetzt Mitglied werden</Title>
+      <Text>Ich möchte diesen Teppich nicht kaufen</Text>
     </Layout>
   )
 }
