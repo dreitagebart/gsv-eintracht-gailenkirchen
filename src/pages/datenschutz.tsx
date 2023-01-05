@@ -7,7 +7,7 @@ const Page = () => {
     <Layout title='Datenschutz'>
       <Pod>
         <Title>Datenschutz</Title>
-        <Text>Alles klar</Text>
+        <Text>Alles klar, du mich auch</Text>
       </Pod>
     </Layout>
   )

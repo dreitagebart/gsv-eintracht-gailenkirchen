@@ -1,12 +1,14 @@
 import { Text, Title } from '@mantine/core'
 
-import { Layout } from '../components'
+import { Layout, Pod } from '../components'
 
 const Page = () => {
   return (
     <Layout title='Verein'>
-      <Title>Verein</Title>
-      <Text>Vereinsseite</Text>
+      <Pod>
+        <Title>Verein</Title>
+        <Text>Vereinsseite</Text>
+      </Pod>
     </Layout>
   )
 }

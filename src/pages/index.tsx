@@ -23,8 +23,8 @@ const useStyles = createStyles((theme) => ({
   },
   title: {
     color: theme.colors.gray[0],
-    fontSize: 60,
-    lineHeight: 2
+    fontSize: 60
+    // lineHeight: 2
   },
   content: {
     maxWidth: '60rem',
@@ -54,7 +54,7 @@ const Page = () => {
               >
                 Freude
               </Text>{' '}
-              und{' '}
+              &amp;{' '}
               <Text
                 inherit
                 component='span'
@@ -80,19 +80,13 @@ const Page = () => {
             </Text>
             <Link href='/verein'>
               <Button variant='filled' size='xl'>
-                Du sollsch dei Fresse halde
+                mehr erfahren
               </Button>
             </Link>
           </Stack>
         </Pod>
       </Box>
       <Pod mt='xl'>
-        <Title>Header 1</Title>
-        <Title order={2}>Header 2</Title>
-        <Title order={3}>Header 3</Title>
-        <Title order={4}>Header 4</Title>
-        <Title order={5}>Header 5</Title>
-        <Title order={6}>Header 6</Title>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris

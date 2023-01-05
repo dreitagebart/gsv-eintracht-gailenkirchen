@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { Box, Text, UnstyledButton } from '@mantine/core'
+import { ActionIcon, Box, Text, Tooltip, UnstyledButton } from '@mantine/core'
 import { createStyles, Group } from '@mantine/core'
 import { FC } from 'react'
-import { Code, Heart } from 'tabler-icons-react'
+import { BrandFacebook, BrandInstagram, Code, Heart } from 'tabler-icons-react'
 
 import { Pod } from './Pod'
 
@@ -17,7 +17,10 @@ const useStyles = createStyles((theme) => ({
     position: 'absolute',
     bottom: 0,
     width: '100%',
-    height: 120
+    height: 120,
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      height: 180
+    }
   },
   link: {
     letterSpacing: 1,
@@ -25,6 +28,9 @@ const useStyles = createStyles((theme) => ({
     color: theme.colors.brand[6],
     ':hover': {
       color: theme.colors.brand[5]
+    },
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      fontSize: 14
     }
   },
   credits: {
@@ -32,7 +38,6 @@ const useStyles = createStyles((theme) => ({
   },
   dreitagebart: {
     fontWeight: 'bold',
-    // letterSpacing: 1,
     color: theme.colors.brand[6],
     ':hover': {
       color: theme.colors.brand[5]
@@ -84,6 +89,36 @@ export const Footer: FC<Props> = () => {
               dreitagebart
             </a>
           </Group>
+        </Group>
+        <Group mt='md' spacing='md'>
+          <Tooltip label='Facebook'>
+            <ActionIcon
+              variant='transparent'
+              component='a'
+              href='https://www.facebook.com/profile.php?id=100072472573703'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <BrandFacebook
+                color={theme.colors.brand[1]}
+                size={28}
+              ></BrandFacebook>
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label='Instagram'>
+            <ActionIcon
+              variant='transparent'
+              component='a'
+              href='https://www.instagram.com/gsvgailenkirchen/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <BrandInstagram
+                color={theme.colors.brand[1]}
+                size={28}
+              ></BrandInstagram>
+            </ActionIcon>
+          </Tooltip>
         </Group>
       </Pod>
     </Box>

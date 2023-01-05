@@ -145,7 +145,7 @@ export const Header: FC<Props> = () => {
       >
         <Navbar>
           <Navbar.Section grow>
-            <Flex direction='row' justify='flex-end' p='md'>
+            <Flex direction='row' justify='flex-end' p='md' mt={4}>
               <Burger
                 opened={opened}
                 onClick={() => setOpened(!opened)}
